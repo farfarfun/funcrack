@@ -1,0 +1,31 @@
+[project]
+name = "funcrack"
+version = "0.0.1"
+description = "个人收藏的软件激活与下载资源链接清单：JetBrains 系列激活工具、Mac 软件下载站等，仅有 README，无代码"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+[[project.authors]]
+name = "牛哥"
+email = "niuliangtao@qq.com"
+
+[[project.authors]]
+name = "farfarfun"
+email = "farfarfun@qq.com"
+[[project.maintainers]]
+name = "牛哥"
+email = "niuliangtao@qq.com"
+
+[[project.maintainers]]
+name = "farfarfun"
+email = "farfarfun@qq.com"
+[project.urls]
+Organization = "https://github.com/farfarfun"
+Repository = "https://github.com/farfarfun/funcrack"
+Releases = "https://github.com/farfarfun/funcrack/releases"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
