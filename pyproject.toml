@@ -1,7 +1,7 @@
 [project]
 name = "funcrack"
 version = "0.0.1"
-description = "个人收藏的软件激活与下载资源链接清单：JetBrains 系列激活工具、Mac 软件下载站等，仅有 README，无代码"
+description = "个人收藏的软件激活与下载资源链接清单：JetBrains 系列激活工具、Mac 软件下载站等；附带一个只暴露 __version__ 的最小 Python 包，用于保留包名"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
