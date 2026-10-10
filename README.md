@@ -1,12 +1,12 @@
 # funcrack
 
-个人收藏的软件激活与下载资源链接清单：JetBrains 系列激活工具、Mac 软件下载站等。仓库只有这一份链接清单，没有可执行代码。
+个人收藏的软件激活与下载资源链接清单：JetBrains 系列激活工具、Mac 软件下载站等。仓库主体是下面这份链接清单，另外附带一个最小 Python 包（`src/funcrack/`，只暴露 `__version__`）用于保留 `funcrack` 这个包名。
 
 ## 安装
 
 链接清单直接看本文件即可，**不需要安装任何东西**。
 
-`funcrack` 这个包名仅用于为本组织保留命名，包内除 `__version__` 外不提供任何 API。确实需要在环境里引用时，可以从源码安装：
+包内除 `__version__` 外不提供任何 API。确实需要在环境里引用时，可以从源码安装：
 
 ```bash
 pip install git+https://github.com/farfarfun/funcrack.git
@@ -30,6 +30,29 @@ print(funcrack.__version__)
 ## Mac 软件
 
 - [未来软件园](https://mac.macxz.com/) — 第三方下载站，安装包来源不明，下载后请自行扫描校验
+
+## 开发
+
+开发依赖（`pytest`、`ruff`）定义在 `pyproject.toml` 的 `[dependency-groups].dev` 中，由 `uv` 管理：
+
+```bash
+uv sync
+```
+
+测试与静态检查：
+
+```bash
+uv run pytest -q
+uv run ruff check .
+uv run ruff format --check .
+```
+
+构建与发布走 `funbuild`，不要手写发布脚本：
+
+```bash
+funbuild install   # 本地构建并安装，验证当前代码可安装（不发布、不打标签）
+funbuild build     # 完整发布流程：递增版本、构建、安装校验、发布 PyPI、推送并打标签
+```
 
 ---
 
